@@ -1,0 +1,44 @@
+<footer id="footer" class="section {{ include.side }}">
+		<div class="container">
+		  	<div class="row">
+		    	<div class="twelve columns u-text-center">
+			      	<div class="circle-parent"><div class="circle"></div>
+			      	<a href="https://codepen.io/slasher4k/"><i class="fa fa-codepen" aria-hidden="true"></i></a></div>
+			      	<div class="circle-parent"><div class="circle"></div>
+			       	<a href="https://www.facebook.com/aaronhatchard/"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+			        <div class="circle-parent"><div class="circle"></div>
+			        <a href="https://www.instagram.com/tassie_hazard/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+			        <div class="circle-parent"><div class="circle"></div>
+			        <a href="https://www.freecodecamp.com/slasher4k"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a> </div>        
+		      	</div>    
+		      	<div class="twelve columns">
+		        	<p id="copyright">© 2017 Aaron Hatchard <span class="hidden-xs">-</span><br class="u-show-tablet"/> Website Design & Development<br/>Queensland, Australia</p>
+		      	</div>
+		    </div>
+		</div>		
+	</footer>
+    </div> <!-- end wrapper -->
+	
+<script>
+	var circles = document.querySelectorAll('.circle-parent');
+circles.forEach( function(circle) {
+    circle.addEventListener("mouseenter", function(){
+
+		circle.children[0].style.height = '100%';
+		circle.children[0].style.width = '100%';
+		circle.children[0].style.top = '0px';
+		circle.children[0].style.left = '0px';
+		});
+
+    circle.addEventListener("mouseleave", function(){
+
+		circle.children[0].style.height = '0px';
+		circle.children[0].style.width = '0px';
+		circle.children[0].style.top = '50%';
+		circle.children[0].style.left = '50%';
+
+		});
+})	
+</script>
+</body>
+</html>

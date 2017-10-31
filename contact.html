@@ -1,0 +1,94 @@
+---
+title: Contact Aaron Hatchard | Freelance Web Designer
+metadescription: Need a new website for your business? Then you need to speak to your local freelance web designer, Aaron. Send him a message via the contact form today.
+---
+
+{% include header.html route="contact" %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function onSubmit(token) {
+    if(!document.getElementById("invisible-recaptcha-form").checkValidity())
+    {
+      document.getElementById("invisible-recaptcha-form").reportValidity()
+      return false;
+    }
+    document.getElementById("invisible-recaptcha-form").submit();
+  }
+</script>
+<!-- Start Meet Aaron Section-->
+      <section id="main" class="section bg-white">
+        <div class="container">
+        	<div class="row">
+            <div class="twelve columns u-text-center heading-block">
+              	<h1 class="intro black">Contact Aaron</h1>                        
+            	<p class="subtitle orange">Your website is just a message away…</p>
+        	</div>
+          </div>
+          <div class="row">
+            <div class="eight columns offset-by-two">
+              <p>I create websites designed to meet your business’s needs.</p>
+              <p>It’s like telling Santa what you want for Christmas – except you’ll actually get it. (Well ok, I don’t have a white beard or a red suit, but that’s beside the point…)</p>
+              <p>Simply send me a message and I’ll get back to you shortly to discuss how I can help you get the website you want and need. </p>
+            </div>
+          </div>
+      </div>
+      </section>
+<!-- End Meet Aaron Section-->
+<!-- Start contact Form Section-->
+<style>
+  .grecaptcha-badge {
+    display: none;
+  }
+</style>
+      <section id="services" class="section bg-orange">
+        <div class="container">
+          <div class="row">
+            <div class="twelve columns">
+              <h2 class="intro white"><span class="dotted black-dots">Fill me in</span></h2>              
+            </div>
+          </div>
+          <div class="row">
+            <div class="eight columns offset-by-two">
+              <div class="form-container">
+                  <form accept-charset="UTF-8" id="invisible-recaptcha-form" action="https://usebasin.com/f/822318773071" method="POST">
+                    <div class="row">
+                      <div class="six columns">
+                        <label for="name">Name <span class="white">*</span></label>
+                        <input id="name" type="text" name="name" placeholder="John Doe" required="required" class="u-full-width">
+                      </div>
+                      <div class="six columns">
+                        <label for="email">Email <span class="white">*</span></label>
+                        <input id="email" type="email" name="email" placeholder="johndoe@example.com" required="required" class="u-full-width">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="six columns">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="text" name="phone" placeholder="0400 000 000" class="u-full-width">
+                      </div>
+                      <div class="six columns">
+                        <label for="website">Website</label>
+                        <input id="website" type="text" name="website" placeholder="www.example.com" class="u-full-width">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="twelve columns">
+                        <label for="message">Message <span class="white">*</span></label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project... what is it? Why are you doing it? What do you hope to accomplish? How can I help? Timeline and budget details are also appreciated." height="50em" required="required" class="u-full-width"></textarea>
+                        <input type="text" name="_gotcha" style="display:none">                      
+                        <button class="g-recaptcha button black-inverse" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline">Send Message</button>
+                        <p class="required white">* Required</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Form Section-->
+            
+{% include footer.html side="left" %}
+
+
+                    
