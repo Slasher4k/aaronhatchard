@@ -25,22 +25,14 @@
           <div class="row">
             <div class="eight columns offset-by-two">
               {{ content }}
-
               <div>
 				{% if page.previous.title %}
-
 	          	<a class='accent-inverse button' href="{{ page.previous.url }}" style="float:left;"><<< {{ page.previous.title}} </a>
-
 	          	{% endif %}
-
 	          	{% if page.next.title %}
-
 	          	<a class='accent-inverse button' href="{{ page.next.url }}" style="float:right;"> {{ page.next.title }} >>></a>
-
-	          	{% endif %}
-				
-	          </div>
-          </div>
+	          	{% endif %}</div>
+            </div>
           
         </div>
         </div>
