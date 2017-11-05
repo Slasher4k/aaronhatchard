@@ -36,7 +36,7 @@
 		<a href="/web-portfolio" {% if include.route == 'portfolio' %}class="active"{% endif %}>Portfolio</a>
 		<a href="/testimonials" {% if include.route == 'testimonials' %}class="active"{% endif %}>Testimonials</a>
 		<a href="/blog" {% if include.route == 'blog' %}class="active"{% endif %}>Blog</a>
-		<a href="/contact" id="contact-button" class="" {% if include.route == 'contact' %}class="active"{% endif %}>Contact</a>			
+		<a href="/contact" id="contact-button" {% if include.route == 'contact' %}class="active"{% endif %}>Contact</a>			
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 	</div>
 <script>

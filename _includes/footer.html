@@ -24,7 +24,7 @@
 	var circles = document.querySelectorAll('.circle-parent');
 circles.forEach( function(circle) {
     circle.addEventListener("mouseenter", function(){
-
+    	circle.style.color = "orange";
 		circle.children[0].style.height = '100%';
 		circle.children[0].style.width = '100%';
 		circle.children[0].style.top = '0px';
@@ -32,7 +32,7 @@ circles.forEach( function(circle) {
 		});
 
     circle.addEventListener("mouseleave", function(){
-
+    	circle.style.color = "white";
 		circle.children[0].style.height = '0px';
 		circle.children[0].style.width = '0px';
 		circle.children[0].style.top = '50%';
