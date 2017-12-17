@@ -36,7 +36,7 @@ If you would like to use the time based shipping plugin simply download the file
 The plugin settings are found in Woocommerce->Settings->Shipping->Time Based Shipping
 
 
-[Download Plugin][download]{: .accent-inverse .button .wrap} 
+[Download Plugin][download]{: .accent-inverse .button .wrap download="time-based-shipping.zip"} 
 
 [gmaps_key]: https://developers.google.com/maps/documentation/javascript/get-api-key
 [download]: /downloads/time-based-shipping.zip

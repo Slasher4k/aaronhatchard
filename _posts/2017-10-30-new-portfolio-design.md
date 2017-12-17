@@ -13,8 +13,7 @@ When it came time to update the design the first thing to change was the font fa
 
 After the design was taken care of I decided that I wanted to try, and learn, something new, so instead of sticking with WordPress I made a switch and developed this site with [Jeykll][jekyll]{: .accent .accent-hover-dots rel="nofollow"}, a blog-aware static site generator. Jekyll is similiar to WordPress in that each page of the website can be constructed from a collection of templates parts (header, content and footer) that are then combined to make a single page, unlike WordPress though, Jekyll does not require the use of a database for the blog, each post is just a text file, written in the Kramdown markdown language, in a folder named posts.  
 
-To keep the load time fast and page sizes small I also opted to avoid the jQuery library and use plain javascript and also minimixe the use of addition css frameworks, only using the small boilerplate css framework [Skeleton][skeleton]{: .accent .accent-hover-dots rel="nofollow"} to provide a repsonsive layout.
-
+To keep the load time fast and page sizes small I also opted to avoid the jQuery library and use plain javascript. I also minimized the use of addition css frameworks, only using the small boilerplate css framework [Skeleton][skeleton]{: .accent .accent-hover-dots rel="nofollow"} to provide a repsonsive layout as opposed to the Bootstrap framework I used previous where I only used like 5% of the features provided by it.
 
 
 [jekyll]: https://jekyllrb.com/
