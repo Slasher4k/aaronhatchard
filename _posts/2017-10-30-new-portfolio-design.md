@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "New Website Design"
+metadescription: Learn the process I followed when I updated the look of my website
 ---
 
 {::options auto_ids="false" /}

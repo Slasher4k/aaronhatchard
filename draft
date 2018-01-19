@@ -1,0 +1,206 @@
+Assume you are building an app to rate bars and you store all information for a bar, e.g. name, business hours and price range. Later, you want to add the possibility for users to search for bars in their vicinity. This is where GeoFire comes in. You can store the location for each bar using GeoFire, using the bar IDs as GeoFire keys. GeoFire then allows you to easily query which bar IDs (the keys) are nearby. To display any additional information about the bars, you can load the information for each bar returned by the query.
+
+
+In this tutorial we are going to use VueJS and Geofire to make an app that allows us to do location based searching, in our case we are going to create an app that searches for fishponds around Grand Falls, Montana, within a radius provided by the user. 
+
+
+Prerequisites
+
+Firebase database ([follow these instructions][firebase_setup] to setup a database)
+Knowledge of VueJS components and Vue-CLI
+
+
+Setup Vue Project
+
+vue init webpack-simple fishponds
+cd fishponds
+npm install // install dependencies
+npm install firebase geofire --save  // install firebase and geofire
+
+
+Once we all the packeges have installed open the App.vue file and delete everything inside, we will be writting it all from scratch.
+
+First thing we need to do is put our component skeleton code into App.vue, i.e. the template,script and style sections
+
+
+<template>
+  <div id="app">
+  </div>
+</template>
+
+<script>
+
+export default {
+	name:'app',
+	data(){
+		return{
+
+		}
+	}
+}
+
+</script>
+
+<style>
+</style>
+
+
+Once we have our skeleton code setup we will be focusing mostly on the script section for the next part. The heavy lifting for our app is going to be done by GeoFire so the next thing we are going to do is import and setup firebase and GeoFire. At the top of our script section we need to import firebase and geofire
+
+import firebase from 'firebase';
+import geofire from 'geofire';
+
+
+
+next we need to initialise and setup firebase and geofire with the settings from our firebase admin console
+
+// Firebase configuration settings
+  const config = {
+    apiKey: <API_KEY>,
+    databaseURL: <DATABASE_URL>,
+  };
+
+// initialise firebase App
+const firebaseApp = firebase.initializeApp(config);
+
+// Setup the link to our geofire database that will act as our fishpond location database
+// the string passed to the child method is the name of the database where geofire will store and access location data
+
+let geoFireRef = firebase.database().ref().child('fishponds');
+let geoFireApp = new GeoFire(geoFireRef);
+
+
+At this point we are technically able to access our location data but we don't have any location data stored in our database, so kind of pointless, to fix that we will now setup our fishpond and location data.
+
+Our fishponds are going to have four pieces of information, name, number of fish, fish species and the ph level and will be stored in an object like so
+
+{
+    name:"Rainbow Pond",
+    fishCount:12,
+    fishSpecies:["Angel",'Raindow','trout'],
+    phLevel:5
+}
+
+In the App.vue data we will add a fishponds property to hold an object with 4 fishponds, each with a unique key i.e. pond1, pond2, pond3 and pond4. 
+
+data () {
+    return {
+          fishponds:{
+            pond1:{
+                name:"Rainbow Pond",
+                fish:12,
+                species:["Angel",'Raindow','trout'],
+                ph:5
+            },
+             pond2:{
+                name:"Unicorn Pond",
+                fish:42,
+                species:['Catfish','Haddock'],
+                ph:7
+            },
+             pond3:{
+                name:"Raindrop Pond",
+                fish:8,
+                species:['trout', 'goldfish','Flathead'],
+                ph:8
+            },
+             pond4:{
+                name:"Butterfly Pond",
+                fish:135,
+                species:['Guppy','trout'],
+                ph:4.3
+            }
+            
+        }
+    }
+}
+
+
+The fishponds keys are then used as the key values in our GeoFire database, this is important because when a fishpond is found by GeoFire it returns the key value and we then use that key value to find load the appropriate fishpond data to display e.g. if the returned key is "pond2" we can get the corresponding data by using fishponds['pond2']
+
+To populute the fishpond location database we need to create an array of objects that contain the fishpond key along with its corresponding latitude/longitude location.
+
+[
+	{"key":'pond1',"location":[47.611738,-111.206178]},
+	{"key":'pond2',"location":[47.486847,-111.359729]},
+	{"key":'pond3',"location":[47.381058,-110.944123]},
+	{"key":'pond4',"location":[47.413926,-111.297119]}
+]
+
+Next we need to loop through the location array and add each location to the database, to do this we are going to use one of the code examples provided by GeoFire but slightly modified. We need two files, index.html and fishponds.js, create these in a new folder on your desktop and add the following to each file.
+
+<script src="https://gist.github.com/Slasher4k/e22532c4aa8096ef197e4969049206c9.js"></script>
+<script src="https://gist.github.com/Slasher4k/71f7bd0b89e28ba17fff3db99f8e6553.js"></script>
+
+
+Update index.html with your firebase settings and then open index.html in a web browser and you will see a message once all the fishponds have been added to GeoFire. Once the fishponds are added we can now move onto searching for fishponds near Grand Falls, Montana. To search with GeoFire we use a query object that is provided a location centre, as a latitude/longitude pair, to search around, in this case it's always Grand Falls, and the radius around that point to search within. 
+
+Back in our script section we need to add properties for our GeoFire query object, location centre, radius and list of fishponds found by the query
+
+geofireQuery:null, // Query object
+centre:[47.493959,-111.282791],  // search center
+radius:0,  // search radius
+fishPondIds:[] // fishponds within radius
+
+A radius of 0 isn't going to be very useful so let's go to our template and add an input, linked to radius, so the user can set the radius, and a button, that calls the method "getNearbyPonds" when the user clicks search
+
+<template>
+  <div id="app">
+  	<input class="input" type="number" name="" v-model.number="radius" placeholder="Radius (km)" />
+  	<button @click="getNearbyPonds">Search</button>
+  </div>
+</template>
+
+add the "getNearbyPonds" method to our script section, this method is going to contain all our app logic 
+
+export default {
+  name: 'app',
+  data () {
+    return {
+         // ...
+  },
+  methods:{
+   getNearbyPonds(){
+      
+    }
+  }
+}
+
+When we call "getNearbyPonds" we need to use a GeoFire query, if one exists we can just update the search options otherwise we need to create one. 
+
+ if (this.geofireQuery != null) {
+    
+  this.geofireQuery.updateCriteria({
+    center: this.centre,
+    radius: this.radius
+  });
+
+} else {
+
+  this.geofireQuery = geoFireApp.query({
+        center: this.centre,
+        radius: this.radius
+    });
+   
+}
+
+
+A GeoFire query has two events that we need to listen to, key_entered and key_exited. key_entered is triggered when one of the fishpond locations is found within the search radius and we are given the key of that location, e.g. if the location 47.611738,-111.206178 is within the search radius we get the corresponding key for that location, "pond1", and we can then add it to our list of fishpond ids. key_exited is basically the opposite, when the fishpond is no longer within our search area due to the shrinking of the radius or moving of the search center we get the key of the location that was removed and then we can remove that key from our list of fishpond ids.
+
+In the else statement, after creating the GeoFire que, add our event listeners 
+
+this.geofireQuery.on("key_entered", (key, location, distance)=> {
+	this.fishPondIds.push(key);
+});
+
+this.geofireQuery.on("key_exited", (key, location, distance) => {
+	let removeIndex = this.fishPondIds.findIndex(x => x == key);
+	this.fishPondIds.splice(removeIndex,1);	
+});
+
+
+
+ The first thing our app needs access to is the location specific information, we will us a simple object to store the fish pond data but it could also be kept in any database of your choice.
+
+ [firebase_setup]: https://firebase.google.com/docs/web/setup
+ [fish3]: https://github.com/firebase/geofire-js/tree/master/examples/fish3

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Woocommece time based shipping plugin"
+metadescription: If you want to add a time based shipping calculator to your WooCommerce store then this is the plugin for you
 ---
 
 <style>
