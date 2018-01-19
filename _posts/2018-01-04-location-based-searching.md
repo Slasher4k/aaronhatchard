@@ -14,7 +14,7 @@ In this tutorial we are going to use VueJS and Geofire to make an app that allow
 
 ### Prerequisites ###
 
-Firebase database ([follow these instructions][firebase_setup]{: .accent .accent-hover-dots rel="nofollow"} to setup a database)  
+Firebase database ([follow these instructions][firebase_setup]{: .white .white-hover-dots rel="nofollow"} to setup a database)  
 Knowledge of VueJS components, ES6 and Vue-CLI
 
 ### Steps ###
