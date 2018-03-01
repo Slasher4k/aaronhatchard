@@ -41,5 +41,31 @@ circles.forEach( function(circle) {
 		});
 })	
 </script>
+<div class="fb-customerchat"
+ page_id="454521651561956" 
+ theme_color="#383F41"
+ logged_in_greeting="Hi, tell me what you're looking for"
+ logged_out_greeting="Thanks for talking to me :)">
+</div>
 </body>
+
+<script>
+	//facebook sdk
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2142552666002894',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </html>
