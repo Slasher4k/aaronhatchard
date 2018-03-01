@@ -6,7 +6,7 @@ metadescription:
 
 {::options auto_ids="false" /}
 
-One of the side projects I have been working on lately, and which is still a work in progress, is a website for house sitting in Canada, [canadianhousesits.com][chs]{: .accent-inverse .button rel="nofollow"}. The site has its basic functionality that allows users to sign up, post house sits and message each other but it doesn't yet have the option for home owners to leave reviews for the house sitters so that is what I am curently adding. As I develop and add this functionality, the steps I take should be useable for any site or app that wants to add a review system, so I will be posting my development process and hope it might be useful for your projects.
+One of the side projects I have been working on lately, and which is still a work in progress, is a website for house sitting in Canada, [canadianhousesits.com][chs]{: .white .white-hover-dots rel="nofollow"}. The site has its basic functionality that allows users to sign up, post house sits and message each other but it doesn't yet have the option for home owners to leave reviews for the house sitters so that is what I am curently adding. As I develop and add this functionality, the steps I take should be useable for any site or app that wants to add a review system, so I will be posting my development process and hope it might be useful for your projects.
 
 When it comes to getting house sitting reviews from a home owner there are two possibilites, first the home owner can choose to leave a review without any prompting or the house sitter needs to request a review from the home owner. If it is the end date for the house sit or later and a home owner is logged in I provide a "Leave Review" button and if a house sitter is logged in they get a "Request Review" button. Now if only it was as easy as adding the buttons, I now have to start thinking about the backend and how I am going to store a review in the database and the rest of the programming logic. In regards to the database design I need to ensure that there can't be more than one review per house sit and that it is linked to a house sitter so that I can display the correct reviews on the house sitters' profile page.
 
@@ -36,6 +36,7 @@ completed:{
 }
 created:{ type: Date, default: Date.now }
 ~~~~~
+{: style="text-align:left"}
 
 I added the "published" property so the house sitter is able to choose if they want the review to be visible on their public profile and the "completed" property to indicate if the home owner has completed the review.
 
