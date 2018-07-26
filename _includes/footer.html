@@ -13,7 +13,7 @@
 			        <a href="https://www.freecodecamp.com/slasher4k"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a> </div>        
 		      	</div>    
 		      	<div class="twelve columns">
-		        	<p id="copyright">© 2017 Aaron Hatchard<span class="u-hide-small"> - </span><br class="u-show-tablet"/>Website Design & Development<br/>Queensland, Australia</p>
+		        	<p id="copyright">© <span id="copyright-year"></span> Aaron Hatchard<span class="u-hide-small"> - </span><br class="u-show-tablet"/>Website Design & Development<br/>Queensland, Australia</p>
 		      	</div>
 		    </div>
 		</div>		
@@ -40,6 +40,8 @@ circles.forEach( function(circle) {
 
 		});
 })	
+
+document.getElementById('copyright-year').innerHTML = new Date().getFullYear();
 </script>
 <div class="fb-customerchat"
  page_id="454521651561956" 
