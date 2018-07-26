@@ -4,65 +4,77 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>http://www.aaronhatchard.com.au/</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/about</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/wordpress-developer</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/custom-web-design-development</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/web-support-more</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/web-portfolio</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/testimonials</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/blog</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/contact</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://www.aaronhatchard.com.au/2018/07/20/custom-wordpress.html</loc>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.aaronhatchard.com.au/2018/01/26/add-review-feature.html</loc>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>http://www.aaronhatchard.com.au/2018/01/04/location-based-searching.html</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/2017/12/16/woocommerce-time-based-shipping.html</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.aaronhatchard.com.au/2017/10/30/new-portfolio-design.html</loc>
-  <lastmod>2018-01-23T21:17:06+00:00</lastmod>
+  <lastmod>2018-07-26T00:09:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
