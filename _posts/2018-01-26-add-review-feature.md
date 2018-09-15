@@ -45,14 +45,10 @@ When it comes to submitting a new review it needs to know which house sit and ho
 The URL to display the new review form is going to be canadianhousesits.com/reviews/new/<review id> but the actual links for the buttons will be different as I now perform a middle step before the home owener arrives at the page or the house sitter sends the email.
 
 
-
- even though it's the same link I want something different to happen based on whether it's the home owner or house sitter following the link and to do this I have the "Leave Review" as a normal a tag link, which requests the page with a GET request and I have the "Request Review" as the action in a form so that the page is requesting via a POST request thus allowing me to perform a particular action based on the method used to request the page. When either request is made I do some checks to make sure a review doesn't already exist for the house sit, and if one doesn't I create a new review, save it to the database and then uses the new review ID and redirect the home owner to the updated that the home owner is the one that posted that house sit
-
+Even though it's the same link I want something different to happen based on whether it's the home owner or house sitter following the link and to do this I have the "Leave Review" as a normal a tag link, which requests the page with a GET request and I have the "Request Review" as the action in a form so that the page is requesting via a POST request thus allowing me to perform a particular action based on the method used to request the page. When either request is made I do some checks to make sure a review doesn't already exist for the house sit, and if one doesn't I create a new review, save it to the database and then uses the new review ID and redirect the home owner to the updated that the home owner is the one that posted that house sit
 
 
-
-
-all that is left to do is notify the house sitter once the review has been left so that they can choose to publish it the their profile
+All that is left to do is notify the house sitter once the review has been left so that they can choose to publish it the their profile
 
 
 
