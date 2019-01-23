@@ -90,7 +90,7 @@ Set the homepage route to `'GET /'` and restart the app and you can view the hom
 
 If your coming from express this is the equivelent of defining your routes as app.get("/login", user.login) where the method is the HTTP verb, the first parameter is the url part of the address and the second parameter is the target.
 
-For more information on routes read the [officail route documentation][routes]{: .white .white-hover-dots rel="nofollow"}.
+For more information on routes read the [official route documentation][routes]{: .white .white-hover-dots rel="nofollow"}.
 
 
 ## Route Targets
@@ -183,7 +183,7 @@ module.exports = {
     newUser: function(req,res){
         var username = req.body.username;
         
-        res.send(`<h1>Hi ${username}, thank you for registering`);
+        res.send(`<h1>Hi ${username}, thank you for registering</h1>`);
     }
     
 }
