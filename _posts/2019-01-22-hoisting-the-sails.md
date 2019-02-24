@@ -115,7 +115,7 @@ and finally restart our app and naviagate to `/user/userdetails`. You will be pr
 
 If we don't want to use one of the HTTP verbs of an implicit route we can set an explicit route for it and set the target as {response: 'notFound'} e.g. `'POST /user/registerUser':{response: 'notFound'}` or if we want to disable the route completely we can use `'/user/registerUser': {response: 'notFound'}`
 
-## Whats next
+## What's next
 {: .dotted .white-dots}
 
 In the next tutorial we will start looking at how to store and retreive data with sails.js

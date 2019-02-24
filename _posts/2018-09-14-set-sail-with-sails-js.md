@@ -226,7 +226,7 @@ For more information on actions read the [official action documentation][actions
 Now that you know the basics go ahead and create `deleteUser` and `resetPassword` actions in `UserController.js` and the `show-tags` standalone acton in a 'tag' subfolder of the blog folder that will return some text to the user to let them know what page they are on and then create all the accompanying routes.
 
 
-## Whats next
+## What's next
 {: .dotted .white-dots}
 
 In the next tutorial we will be learning all about implicit routes, which means we just need to create actions and Sails will generate the routes based on the methods in our controller files and the structure and nesting of our folders in the `api/controllers` folder.
