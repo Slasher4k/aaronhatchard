@@ -263,7 +263,7 @@ If we revisit our app in the browser we will see all our components looking some
 
 ![Fairtasker initial component design][fairtasker-img]{: .u-responsive-img style="margin: 0 auto;"}
 
-## Apply Material UI
+## Add Material UI
 {: .dotted .white-dots}
 
 It's great that our components are working but the layout and design has a bit of room for improvement so let's get start making use of the `material-ui` components in our components to speed up the construction of our app.
@@ -309,29 +309,16 @@ Next up is the `Tasks` container, in our `state` we will have some dummy tasks (
 import React, { Component } from 'react';
 import TasksLeft from '../../components/TasksLeft/TasksLeft';
 import TasksRight from '../../components/TasksRight/TasksRight';
-
 import Grid from '@material-ui/core/Grid'
 
 class Tasks extends Component {
     state = {
         selectedTask: false,
-        tasks: [{
-            id: '0',
-            title: 'Task 1',
-            description: "I am task 1",
-            status: "Open"
-        },
-        {
-            id: '1',
-            title: 'Task 2',
-            description: "I am task 2",
-            status: "Assigned"
-        }, {
-            id: '2',
-            title: 'Task 3',
-            description: "I am task 3",
-            status: "Completed"
-        }]
+        tasks: Array(8).fill(0).map( (_, i) => ({
+            id: '' + i,
+            title: `Task ${i}`,
+            description: `I am task ${i}`,
+            status: "Completed" }))
     }
 
     render() { 
@@ -344,13 +331,15 @@ class Tasks extends Component {
         }
 
         return ( <Grid container spacing={16} justify="center">
-                        <TasksLeft tasks={tasks} />
-                        <TasksRight task={selectedTask} />
-                 </Grid> );
+                    <TasksLeft tasks={tasks} />
+                    <TasksRight task={selectedTask} />
+                </Grid>);
     }}
  
 export default Tasks;
 ~~~
+
+The task id is turned into a string to used as the key when the array of `TaskCards` is created in `TasksLeft`.
 
 Just to show the switching of the `TasksMap` and `TaskDetails` components when there is a selected task I have put the following snippet into `render()`:
 
@@ -364,7 +353,7 @@ if(!selectedTask){
 
 On the first render of `TasksRight` we will see `TasksMap` and set a timer for 3 seconds after which `selectedTask` is set to the first of our `tasks` and `TasksMap` changes to `TaskDetails`.
 
-For `TasksLeft` we need to replace `Array.fill()` with a mapping of tasks from `props.tasks` to `TaskCards's` and pass in the `task`.
+For `TasksLeft` we need to replace `Array.fill()` with a mapping of tasks from `props.tasks` to `TaskCards` and pass in the `task`.
 
 ~~~
 // ./components/TasksLeft/TasksLeft.js
@@ -382,7 +371,7 @@ const TasksLeft = ({ tasks }) => {
 export default TasksLeft;
 ~~~
 
-For `TaskCard's` we will use a `Card` component and output the task information along with some static placeholder information to match the Airtasker task cards.
+For `TaskCards` we will use a `Card` component and output the task information along with some static placeholder information to match the Airtasker task cards.
 
 ~~~
 // ./components/Tasksleft/TaskCard/TaskCard.js
@@ -413,7 +402,7 @@ const TaskCard = ({ task }) => {
             </Typography>
             <hr />
             <Typography variant="caption">
-                {task.status}} - 1 offers
+                {task.status} - 1 offers
             </Typography>
         </CardContent>
     </Card> );
@@ -434,7 +423,7 @@ import Grid from '@material-ui/core/Grid'
 
 const TasksRight = ({ task }) => {
     
-    return (<Grid item xs={6}>
+    return (<Grid item xs={4}>
         { task ? <TaskDetails task={task} /> : <TasksMap /> }
     </Grid> );
 }
@@ -498,10 +487,15 @@ With all the components updated to include `material-ui` components, if we now v
 
 [![Fairtasker initial material ui design][fairtasker-final-img]{: .u-responsive-img}][fairtasker-final-img]
 
-## Conclusion
+## The End
 {: .dotted .white-dots}
 
-Phew! We have done quite a bit and our app is starting to take shape. We still have some minor CSS additions to make to bring the design more in line with Airtasker, like adding a colored side to our `TaskCard` depending on the task status and adding come 
+Phew! That was a lot of typing (for me at least). We have done a good amount of work and our app is starting to take shape. We still have some minor CSS additions to make to bring the design more in line with Airtasker, like adding a coloured side and spacing around the `TaskCards` and adding a backgound colour to the page so the cards standout. When the screen starts to get smaller `TasksLeft` begins to get squished so we will need some minimum widths to prevent that and instead of the whole page being scrollable when we have a lot of `TaskCards` we will make the `TasksLeft` and `TasksRight` independently scrollable. 
+
+In regards to functionality we have a couple of things to do, we don't want to rely on the timer to select a task for us so we will use `react-router-dom` to enable us to click on a `TaskCard` and be shown the details in `TaskDetails`. When it comes to smaller screens it is impractical to show both `TasksLeft` and `TasksRight` so we will use `react-responsive` to show only one at a time.
+
+Now that we know the CSS and functionality additions that need to be made be sure to tune in next time as I walk you through how we do that.
+
 
 [tasks]:https://www.airtasker.com/tasks/
 [material-ui]:https://material-ui.com
