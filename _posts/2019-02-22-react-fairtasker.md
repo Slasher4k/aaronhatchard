@@ -274,7 +274,7 @@ In `Layout` we will put our navigation bar, made with the `AppBar` component and
 
 We will be using the spacing property of `Grid` which can produce [unwanted horizontal scrolling][negative-margins]{: .white .white-hover-dots rel="nofollow"}, we will take the approach of wrapping the `props.children` in a `div` with some padding to fix the horizontal scrolling issue. 
 
-{% assign style="{{ padding: '16px 8px' }}" %}
+{% assign style="{{ padding: '8px' }}" %}
 
 ~~~
 // ./components/Layout/Layout.js
