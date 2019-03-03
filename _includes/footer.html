@@ -1,6 +1,9 @@
 <footer id="footer" class="section {{ include.side }}">
+
+{{ page.usereact }}
+
 		<div class="container">
-		  	<div class="row">
+		  	<div class="row">				
 		    	<div class="twelve columns u-text-center">
 			      	<div class="circle-parent"><div class="circle"></div>
 			      	<a href="https://codepen.io/slasher4k/"><i class="fa fa-codepen" aria-hidden="true"></i></a></div>
@@ -70,4 +73,10 @@ js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+{% if page.highlightReact or layout.highlightReact %}
+<script src="/js/prism.js"></script>
+{% endif %}
+
+
 </html>

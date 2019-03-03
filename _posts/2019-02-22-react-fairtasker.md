@@ -8,12 +8,12 @@ metadescription: "Create an Airtasker clone with React"
 
 #### (Part 1)
 
-To practice our React skills we are going to be building a simple clone of the airtasker website, specifically the [browse tasks][tasks]{: .white .white-hover-dots rel="nofollow"} page. 
+To practice our React skills we are going to be building a simple clone of the Airtasker website, specifically the [browse tasks][tasks]{: .white .white-hover-dots rel="nofollow"} page. 
 
 [![Highlighted Airtasker components][airtasker-components-img]{: .u-responsive-img}][airtasker-components-img]
 
 Having looked at the browse tasks page we can start to workout the initial components we are going to need for our app. The coloured rectangles are going to become the following components:
-
+ 
 * Layout: Black
 * Navigation Menu: Blue
 * Tasks: Red
@@ -40,7 +40,7 @@ Knowledge requirements:
 {: style="list-style: inside;"}
 
 
-The first thing we need to do is create our app using create-react-app, if you haven't done so you will first need to install create-react-app via npm `npm install -g create-react-app`, you can call the project anything you like but I'm going with 'fairtasker'. Once the project is setup we will go ahead and install the other dependancies material-ui, react-responsive and react-router-dom to add naviagtion to our app.
+The first thing we need to do is create our app using `create-react-app`, if you haven't done so you will first need to install `create-react-app` via npm `npm install -g create-react-app`, you can call the project anything you like but I'm going with 'fairtasker'. Once the project is setup we will go ahead and install the other dependancies `material-ui`, `react-responsive` and `react-router-dom`.
 
 ~~~
 create-react-app fairtasker
@@ -58,7 +58,7 @@ First we will delete following files from the src directory:
 * serviceWorker.js
 {: style="list-style: inside;"}
 
-Next we need to remove some imports from the `App.js` and `index.js`. From `App.js` we will remove the logo and css imports. While we're in the `App.js` file we will replace the contents of the main `div` with `"Hello World"`
+Next we need to remove some imports from the `App.js` and `index.js`. From `App.js` we will remove the logo and CSS imports. While we're in the `App.js` file we will replace the contents of the main `<div />` with `"Hello World"`
 
 ~~~
 import React, { Component } from 'react';
@@ -87,13 +87,13 @@ import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
 ~~~
 
-To support our use of the Material design pattern provided by the `material-ui` module we need to include the Roboto font, to do this we will go the route of adding a link to the `index.html` file found in the `public`{: .language-none} directory, if you want to you can also [install it via npm][roboto-npm]{: .white .white-hover-dots rel="nofollow"}
+To support our use of the material design pattern provided by the `material-ui` module we need to include the Roboto font, to do this we will go the route of adding a link to the `index.html` file found in the `public`{: .language-none} directory, if you want to you can also [install it via npm][roboto-npm]{: .white .white-hover-dots rel="nofollow"}.
 
 ~~~
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"> 
 ~~~
 
-While we're  in the `index.html` file go ahead and update the title of our app to `Fairtasker`
+While we're in the `index.html` file go ahead and update the title of our app to `Fairtasker`.
 
 ~~~
 <title>Fairtasker</title>
@@ -105,7 +105,7 @@ The final step before we begin adding our components is adding some additional f
 * containers: Contains our stateful components
 {: style="list-style: inside;"}
 
-Run the command `npm run start` and it will open a broswer at `http://localhost:3000/`{: .language-none} where we will see out running app displaying `Happy World` to us. Now that our initial setup is working we will start adding our own components.
+Run the command `npm run start` to start the development server and it will open a broswer at `http://localhost:3000/`{: .language-none} where we will see our running app displaying `Happy World` to us. Now that our initial setup is working we will start adding our own components.
 
 
 ## Creating Components
@@ -134,10 +134,9 @@ export default Layout;
 
 We could split the navigation bar off as it's own component but for now it will be a simple navigation bar so we will leave it as is, depending how we go we might seperate it out in the future.
 
-Next up is the overall `Tasks` container which will manage the tasks and associated data and pass relevant data to the `TasksLeft` and `TasksRight` components.
+Next up is the overall `Tasks` container which will manage the tasks and associated data and pass relevant data to `<TasksLeft />` and `<TasksRight />`.
 
-Add the `Tasks` folder to `containers` and create `Tasks.js`, this is a stateful component and will import and render `<TasksLeft />` and `<TasksRight />` 
-
+Add the `Tasks` folder to `containers` and create `Tasks.js`, this is a stateful component and will import and render `<TasksLeft />` and `<TasksRight />`. 
 
 ~~~
 // ./containers/Tasks/Tasks.js
@@ -196,7 +195,7 @@ export default TaskCard;
 
 That is all for `TasksLeft`, now to work on `TasksRight`.
 
-`TasksRight` will have two different components that will only be shown, either `TasksMap` if no task is selected or `TaskDetails` if a task is selected. `TasksMap` and `TaskDetails` will only be used by `TasksRight` so they will also be in subfolders of the `TasksRight` folder.
+`TasksRight` will switch between two components, either `<TasksMap />` if no task is selected or `<TaskDetails />` if a task is selected. `TasksMap` and `TaskDetails` will only be used by `TasksRight` so they will also be in subfolders of the `TasksRight` folder.
 
 
 ~~~
@@ -240,7 +239,7 @@ const TaskDetails = (props) => {
 export default TaskDetails;
 ~~~
 
-Now that all the components are created we can import `Layout` and `Tasks` into our `App` component and render `Tasks` as a child of `Layout`.
+Now that all the components are created we can import `Layout` and `Tasks` into our `App` component and render `<Tasks />` as a child of `<Layout />`.
 ~~~
 // ./App.js
 
@@ -270,9 +269,9 @@ It's great that our components are working but the layout and design has a bit o
 
 If you would like to understand what the props that we pass to the `material-ui` components are doing, visit their corresponing API pages: [Grid][MI-Grid]{: .white .white-hover-dots rel="nofollow"}, [Appbar][MI-Appbar]{: .white .white-hover-dots rel="nofollow"}, [Typography][MI-Typography]{: .white .white-hover-dots rel="nofollow"}
 
-In `Layout` we will put our navigation bar, made with the `AppBar` component and render the children passed in via props.
+In `Layout` we will put our navigation bar, made from `<AppBar />` and render the children passed in via props.
 
-We will be using the spacing property of `Grid` which can produce [unwanted horizontal scrolling][negative-margins]{: .white .white-hover-dots rel="nofollow"}, we will take the approach of wrapping the `props.children` in a `div` with some padding to fix the horizontal scrolling issue. 
+We will be using the spacing property on `<Grid />` which can produce [unwanted horizontal scrolling][negative-margins]{: .white .white-hover-dots rel="nofollow"}, we will take the approach of having `props.children` be childen of a `<div />` with some padding to fix the horizontal scrolling issue. 
 
 {% assign style="{{ padding: '8px' }}" %}
 
@@ -285,10 +284,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 const Layout = ({ children }) => {
-    return (<><AppBar position="static">
+    return (<><AppBar position="static" color="default">
                     <Toolbar>
                         <Typography variant="h6" >
-                            Fairtakser
+                            Fairtasker
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -301,7 +300,7 @@ const Layout = ({ children }) => {
 export default Layout;
 ~~~
 
-Next up is the `Tasks` container, in our `state` we will have some dummy tasks (`tasks`) that will be passed to `TasksLeft` and a selected task (`selectedTask`) that will go to `TasksRight`.
+Next up is the `Tasks` container, in our `state` we will have some dummy tasks (`state.tasks`) that will be passed to `<TasksLeft />` and a selected task (`state.selectedTask`) that will go to `<TasksRight />`.
 
 ~~~
 // ./containers/Tasks/Tasks.js
@@ -313,7 +312,7 @@ import Grid from '@material-ui/core/Grid'
 
 class Tasks extends Component {
     state = {
-        selectedTask: false,
+        selectedTask: null,
         tasks: Array(8).fill(0).map( (_, i) => ({
             id: '' + i,
             title: `Task ${i}`,
@@ -339,9 +338,9 @@ class Tasks extends Component {
 export default Tasks;
 ~~~
 
-The task id is turned into a string to used as the key when the array of `TaskCards` is created in `TasksLeft`.
+The task id is turned into a string to used as the key when the array of `<TaskCard />`'s is created in `TasksLeft`.
 
-Just to show the switching of the `TasksMap` and `TaskDetails` components when there is a selected task I have put the following snippet into `render()`:
+Just to show the switching of the `<TasksMap />` and `<TaskDetails />` when there is a selected task the following snippet was added to `render()`:
 
 ~~~
 if(!selectedTask){
@@ -351,9 +350,9 @@ if(!selectedTask){
 }
 ~~~
 
-On the first render of `TasksRight` we will see `TasksMap` and set a timer for 3 seconds after which `selectedTask` is set to the first of our `tasks` and `TasksMap` changes to `TaskDetails`.
+On the first render of `<TasksRight />` we will see `<TasksMap />` and set a timer for 3 seconds after which `selectedTask` is set to the first of our `tasks` and `<TasksMap />` is repalced with `<TaskDetails />`.
 
-For `TasksLeft` we need to replace `Array.fill()` with a mapping of tasks from `props.tasks` to `TaskCards` and pass in the `task`.
+For `TasksLeft` we need to replace `Array.fill()` with a mapping of tasks from `props.tasks` to `<TaskCard />`'s and pass each task to the `<TaskCard />` `task` prop.
 
 ~~~
 // ./components/TasksLeft/TasksLeft.js
@@ -371,7 +370,7 @@ const TasksLeft = ({ tasks }) => {
 export default TasksLeft;
 ~~~
 
-For `TaskCards` we will use a `Card` component and output the task information along with some static placeholder information to match the Airtasker task cards.
+For `TaskCards` we will use the `Card` component from `material-ui` and output the task information along with some static placeholder information to match the Airtasker task cards.
 
 ~~~
 // ./components/Tasksleft/TaskCard/TaskCard.js
@@ -411,7 +410,7 @@ const TaskCard = ({ task }) => {
 export default TaskCard;
 ~~~
 
-For `TasksRight` we will again use a `Grid` and conditionally render within it either `TaskDetails` (passing on the `task`) or `TasksMap` based on if it is passed a task in it's `props`.
+For `TasksRight` we will again use `<Grid />` and conditionally render within it either `<TaskDetails />` (passing on the `task`) or `<TasksMap />` based on if it is passed a task in it's `props`.
 
 ~~~
 // ./components/TasksRight/TasksRight.js
@@ -431,7 +430,7 @@ const TasksRight = ({ task }) => {
 export default TasksRight;
 ~~~
 
-For now `TaskDetails` will use `Card` to output the task title and description. (We will add more to this component in the future.)
+For now `TaskDetails` will use `<Card />` to output the task title and description (we will add more to this component in the future).
 
 ~~~
 // ./components/TasksRight/TaskDetails/TaskDetails.js
@@ -458,7 +457,7 @@ const TaskDetails = ({ task }) => {
 export default TaskDetails;
 ~~~
 
-`TasksMap` will eventually have an interactive map showing the location of tasks but for now we will simply show a card with placeholder text.
+`TasksMap` will eventually have an interactive map showing the location of tasks but for now we will simply show a `<Card />` with placeholder text.
 
 ~~~
 // ./components/TasksRight/TasksMap/TasksMap.js
@@ -509,4 +508,3 @@ Now that we know the CSS and functionality additions that need to be made be sur
 [MI-Appbar]:https://material-ui.com/api/app-bar/
 [MI-Typography]:https://material-ui.com/api/Typography/
 
-<script src="/js/prism.js">
