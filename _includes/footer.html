@@ -4,16 +4,12 @@
 
 		<div class="container">
 		  	<div class="row">				
-		    	<div class="twelve columns u-text-center">
-			      	<div class="circle-parent"><div class="circle"></div>
-			      	<a href="https://codepen.io/slasher4k/"><i class="fa fa-codepen" aria-hidden="true"></i></a></div>
+		    	<div class="twelve columns u-text-center">			    
 			      	<div class="circle-parent"><div class="circle"></div>
 			       	<a href="https://www.facebook.com/aaronhatchard/"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
 			        <br class="u-show-tablet"/>
 			        <div class="circle-parent"><div class="circle"></div>
-			        <a href="https://www.instagram.com/tassie_hazard/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-			        <div class="circle-parent"><div class="circle"></div>
-			        <a href="https://www.freecodecamp.com/slasher4k"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a> </div>        
+					<a href="https://www.instagram.com/tassie_hazard/"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>     
 		      	</div>    
 		      	<div class="twelve columns">
 		        	<p id="copyright">© <span id="copyright-year"></span> Aaron Hatchard<span class="u-hide-small"> - </span><br class="u-show-tablet"/>Website Design & Development<br/>Queensland, Australia</p>
@@ -46,33 +42,8 @@ circles.forEach( function(circle) {
 
 document.getElementById('copyright-year').innerHTML = new Date().getFullYear();
 </script>
-<div class="fb-customerchat"
- page_id="454521651561956" 
- theme_color="#383F41"
- logged_in_greeting="Hi, What can I help you with?"
- logged_out_greeting="Bye">
-</div>
+
 </body>
-
-<script>
-	//facebook sdk
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '2142552666002894',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.12'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 
 {% if page.highlightReact or layout.highlightReact %}
 <script src="/js/prism.js"></script>

@@ -69,7 +69,7 @@ const styles = {
             borderLeftColor: '#f4be36'
         },
         [`&.${TASK_STATUS.COMPLETED}`]: {
-            borderLeftColor: '#545a77'
+            borderLeftColor: '#1339c5'
         },
         [`&.${TASK_STATUS.OPEN}`]: {
             borderLeftColor: 'limegreen'

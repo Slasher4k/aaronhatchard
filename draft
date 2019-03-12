@@ -204,3 +204,37 @@ this.geofireQuery.on("key_exited", (key, location, distance) => {
 
  [firebase_setup]: https://firebase.google.com/docs/web/setup
  [fish3]: https://github.com/firebase/geofire-js/tree/master/examples/fish3
+
+<div class="fb-customerchat"
+ page_id="454521651561956" 
+ theme_color="#383F41"
+ logged_in_greeting="Hi, What can I help you with?"
+ logged_out_greeting="Bye">
+</div>
+
+ <script>
+	//facebook sdk
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2142552666002894',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="circle-parent">
+	<div class="circle"></div>
+	<a href="https://codepen.io/slasher4k/"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+</div>
+			        <div class="circle-parent"><div class="circle"></div>
+			        <a href="https://www.freecodecamp.com/slasher4k"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a> </div>   
