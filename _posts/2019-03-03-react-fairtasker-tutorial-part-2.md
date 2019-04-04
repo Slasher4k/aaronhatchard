@@ -30,10 +30,10 @@ html{
 ~~~
 {: .language-css}
 
-Next we want to improve the look our `<TaskCard />`'s, their styling will be based on a task's status which can be one of three values: `"Open"`, `"Assigned"`, `"Completed"`. The task status will determine the colour of the left hand side border of the `<TaskCard />`. We will create a `constants.js` file in a `util` folder that will export a `TASK_STATUS` object providing those values.
+Next we want to improve the look our `<TaskCard />`'s, their styling will be based on a task's status which can be one of three values: `"Open"`, `"Assigned"`, `"Completed"`. The task status will determine the colour of the left hand side border of the `<TaskCard />`. We will create a `constants.js` file in a `utils` folder that will export a `TASK_STATUS` object providing those values.
 
 ~~~
-// ./util/constants.js
+// ./utils/constants.js
 
 export const TASK_STATUS = {
     ASSIGNED: "Assigned",
@@ -91,7 +91,7 @@ To show the diffenent colours based on task status go to `Tasks.js` and import o
 // ./containers/Tasks/Tasks.js
 
 // ...
-import { TASK_STATUS } from '../../util/constants';
+import { TASK_STATUS } from '../../utils/constants';
 
 const getStatus = (status) => {
     switch (status) {
