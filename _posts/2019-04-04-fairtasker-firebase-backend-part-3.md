@@ -1,6 +1,6 @@
 ---
 layout: react
-title: "Fairtasker: firebase backend"
+title: "Fairtasker: Firebase backend"
 metadescription: "Add firebase realtime database backend to fairtakser for persisiting task data and fetching saved tasks"
 ---
 
