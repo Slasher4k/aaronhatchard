@@ -18,6 +18,8 @@ On mobile devices the "Scene Panel" and "Overlay Panel" and "PDF Request Form" a
 
 I have setup a beach scene demo consisting of 9 overlays divided between 3 layers, sky, ocean and sand.
 
+[![Scene builder user interface][builder]{: .u-responsive-img}][builder]
+
 [View the demo][demo]{: .button .accent-inverse}
 
 
@@ -84,3 +86,4 @@ If you would like a customised version of this plugin, a custom plugin in genera
 [acf]: https://www.advancedcustomfields.com
 [fpdf]: http://www.fpdf.org
 [redux]: https://redux.io/
+[builder]: \images\scene_builder.png
