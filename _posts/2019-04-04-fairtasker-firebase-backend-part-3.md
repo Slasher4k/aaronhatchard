@@ -16,9 +16,9 @@ Now that we have the basics of our layout setup after the first two tutorials it
 ### Setup firebase backend
 {: .dotted .white-dots}
 
-Lets get started by first getting the url to a firebase realtime database, head on over to [firebase](https://firebase.google.com/){: .white .white-hover-dots rel="nofollow"} and create a new project. If you haven't already got a firebase account it's free for what we are going to be doing so once you're there sign up and create a project. Name the project whatever you like, I went with `fairtasker`, and once the project is created you will see the option `Add Firebase to your web app` clicking on this will present you will the code that can be copied to your site, we don't need all of it, just copy the `databaseURL` and save it as an export in our constants file `export const DB_BASE_URL = 'https://example.firebaseio.com/';`.
+Lets get started by first getting the url to a firebase realtime database, head on over to [firebase](https://firebase.google.com/){: .white .white-hover-dots target="_blank" } and create a new project. If you haven't already got a firebase account it's free for what we are going to be doing so once you're there sign up and create a project. Name the project whatever you like, I went with `fairtasker`, and once the project is created you will see the option `Add Firebase to your web app` clicking on this will present you will the code that can be copied to your site, we don't need all of it, just copy the `databaseURL` and save it as an export in our constants file `export const DB_BASE_URL = 'https://example.firebaseio.com/';`.
 
-To see the setting up visually, watch [this video](https://youtu.be/PP4Tr0l08NE?t=60){: .white .white-hover-dots rel="nofollow"}, for around 50 seconds.
+To see the setting up visually, watch [this video](https://youtu.be/PP4Tr0l08NE?t=60){: .white .white-hover-dots target="_blank" }, for around 50 seconds.
 
 ### Seed database
 {: .dotted .white-dots}
@@ -34,7 +34,7 @@ The new tasks contain the additional fields `price`, `postedBy`, `date` and `tim
 
 As we are now going to be getting our tasks asyncronously we won't have tasks to display on initial load. To prevent user's from thinking that the site is broken we will indicate that something is happening by showing a spinner while the required data is being fetched.
 
-Create a `UI` folder in components and add a new file `Spinner.js` and CSS module `Spinner.module.css`. For our `Spinner` we will get the HTML and CSS from [css spinner][css-spinner]{: .white .white-hover-dots rel="nofollow"}, we simply need to choose one we like, view it's source and copy the HTML into our component and the CSS into our CSS file.
+Create a `UI` folder in components and add a new file `Spinner.js` and CSS module `Spinner.module.css`. For our `Spinner` we will get the HTML and CSS from [css spinner][css-spinner]{: .white .white-hover-dots target="_blank" }, we simply need to choose one we like, view it's source and copy the HTML into our component and the CSS into our CSS file.
 
 ~~~
 // ./components/Spinner/Spinner.js
@@ -266,7 +266,7 @@ We will soon be needing to use `loadMoreTasks` in `TasksLeft` so we will go ahea
 
 `<TasksLeft ... loadMore={this.loadMoreTasks}/>`
 
-Next we need to make the component that we can watch, we will use the [scrollmonitor-react][scrollmonitor-react]{: .white .white-hover-dots rel="nofollow"} library and the `Watch` and `ScrollContainer` HOC's to implement this.
+Next we need to make the component that we can watch, we will use the [scrollmonitor-react][scrollmonitor-react]{: .white .white-hover-dots target="_blank" } library and the `Watch` and `ScrollContainer` HOC's to implement this.
 
 Add the `scrollmonitor-react` package to our app `npm install scrollmonitor-react --save`
 

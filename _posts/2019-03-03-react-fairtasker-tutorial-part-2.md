@@ -8,7 +8,7 @@ metadescription: "Create an Airtasker clone with React part 2. Update styling an
 
 #### (Part 2)
 
-Hello, I see you're excited to continue the development of Fairtasker, the Airtasker clone. Today we are going to build off what we did in [part one][part-one]{: .white .white-hover-dots rel="nofollow"}, we'll start with the sytle improvements and add spacing around componenents and put a coloured stripe on the left of the task cards to indicate task state. On the functionality front we are going enable the selecting of tasks from the list of tasks, instead of relying on our timer, and add the abilty to switch the layout based on the screen size. 
+Hello, I see you're excited to continue the development of Fairtasker, the Airtasker clone. Today we are going to build off what we did in [part one][part-one]{: .white .white-hover-dots target="_blank" }, we'll start with the sytle improvements and add spacing around componenents and put a coloured stripe on the left of the task cards to indicate task state. On the functionality front we are going enable the selecting of tasks from the list of tasks, instead of relying on our timer, and add the abilty to switch the layout based on the screen size. 
 
 Knowledge requirements:
 
@@ -46,7 +46,7 @@ These task status values will be used for a few things, firstly they will be use
 
 To apply our new CSS we will use the `withStyles()` function from `material-ui` in `TaskCard.js`. `withStyles()` takes one argument, an object which defines our CSS and returns a HOC. In the end our component will have a new prop passed to it called `classes` which contains an object like: `{root: "TaskCard-root-174"}`, where the key is the DOM element within the `material-ui` component's native DOM elements that the class `"TaskCard-root-174"` will be applied to.
 
-To learn more about customising `material-ui` component styles [read the official documentation][class-naming]{: .white .white-hover-dots rel="nofollow"}.
+To learn more about customising `material-ui` component styles [read the official documentation][class-naming]{: .white .white-hover-dots target="_blank" }.
 
 ~~~
 // ./components/Tasksleft/TaskCard/TaskCard.js
@@ -386,18 +386,18 @@ const TasksRight = ({ task, visible, width }) => {
 export default TasksRight;
 ~~~
 
-If the development server isn't already running start it with `npm run start` and view the current state of our app, it will be looking a bit better than where we left it in [part one][part-one]{: .white .white-hover-dots rel="nofollow"}:
+If the development server isn't already running start it with `npm run start` and view the current state of our app, it will be looking a bit better than where we left it in [part one][part-one]{: .white .white-hover-dots target="_blank" }:
 
-[![Fairtasker after style updates][final-image]{: .u-responsive-img}][final-image]
+[![Fairtasker after style updates][final-image]{: .u-responsive-img}][final-image]{:  target="_blank"}
 
 And if we view the app on smaller screens we will only see `<TasksLeft />` or `<TasksRight />` when we select a task.
-
-[![Fairtasker on mobile gif][mobile-gif]{: .u-responsive-img style="margin: 0 auto;"}][mobile-gif]
+ 
+[![Fairtasker on mobile gif][mobile-gif]{: .u-responsive-img style="margin: 0 auto;"}][mobile-gif]{:  target="_blank"}
 
 ### The End
 {: .dotted .white-dots}
 
-Alright, alright, alright, things are starting to look pretty good, if I do say so myself. We did a lot of work and it is definitely starting to mimic Airtasker so we're on the right track but still have a bit of work to do. It is not useful for the future of our app to be creating the same tasks everytime we load the page, we need to persist and load them from some type of permanent storage. In part 3 we are going to setup up a database using [firebase][firebase]{: .white .white-hover-dots rel="nofollow"}, seed it with some tasks and then load tasks from the database once the page loads. 
+Alright, alright, alright, things are starting to look pretty good, if I do say so myself. We did a lot of work and it is definitely starting to mimic Airtasker so we're on the right track but still have a bit of work to do. It is not useful for the future of our app to be creating the same tasks everytime we load the page, we need to persist and load them from some type of permanent storage. In part 3 we are going to setup up a database using [firebase][firebase]{: .white .white-hover-dots target="_blank" }, seed it with some tasks and then load tasks from the database once the page loads. 
 
 [part-one]: https://www.aaronhatchard.com.au/2019/02/22/react-fairtasker.html
 [class-naming]: https://material-ui.com/customization/overrides/#overriding-with-classes

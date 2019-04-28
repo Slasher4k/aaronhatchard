@@ -25,7 +25,7 @@ Actually, WordPress website themes can be great! They make your life easy, they 
 
 So the Shakespeare-inspired question of “to theme or not to theme” isn’t about arguing that building a custom WordPress site is better than using a theme (or vice versa). Instead, the point is that **it’s important to consider which option best suits your needs**.
 
-Generally speaking, if you want a basic and straightforward website, a WordPress theme should have you covered. (You can make your life even easier by having the site set up by a [WordPress developer][dev]{: .white .white-hover-dots rel="nofollow"}… like yours truly.)
+Generally speaking, if you want a basic and straightforward website, a WordPress theme should have you covered. (You can make your life even easier by having the site set up by a [WordPress developer][dev]{: .white .white-hover-dots }… like yours truly.)
 
 However, if you have something special in mind for your website, a set of very specific website needs, or you don’t want to be constrained by a set theme, then WordPress development services are precisely what you’re looking for.
 
@@ -38,7 +38,7 @@ If you’re after a fairly standard website but you do want to make a few things
 
 I say “to a point” because **any real customisation requires coding knowledge**. 
 
-Once again, that’s where [your friendly neighbourhood WordPress geek][dev]{: .white .white-hover-dots rel="nofollow"} is going to have your back. 
+Once again, that’s where [your friendly neighbourhood WordPress geek][dev]{: .white .white-hover-dots } is going to have your back. 
 
 So if you really need to set up your testimonials page with two columns and the theme only has one, or you want to add words to your home page below the hero image but the theme only has words above, chances are using a WordPress theme is still the way to go. You’ll **just need to get your developer to work a little extra magic on it**.
 
@@ -49,7 +49,7 @@ Like just about anything in business life, the choice between a WordPress websit
 
 Thanks to this blog, you should now have a pretty good idea about your options.
 
-And if you’d like some personalised advice… [just drop me a line][contactme]{: .white .white-hover-dots rel="nofollow"}.
+And if you’d like some personalised advice… [just drop me a line][contactme]{: .white .white-hover-dots }.
 
 [dev]: /wordpress-developer
 [contactme]: /contact

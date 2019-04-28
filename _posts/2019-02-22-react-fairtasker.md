@@ -8,9 +8,9 @@ metadescription: "Create an Airtasker clone with React"
 
 #### (Part 1)
 
-To practice our React skills we are going to be building a simple clone of the Airtasker website, specifically the [browse tasks][tasks]{: .white .white-hover-dots rel="nofollow"} page. 
+To practice our React skills we are going to be building a simple clone of the Airtasker website, specifically the [browse tasks][tasks]{: .white .white-hover-dots target="_blank" } page. 
 
-[![Highlighted Airtasker components][airtasker-components-img]{: .u-responsive-img}][airtasker-components-img]
+[![Highlighted Airtasker components][airtasker-components-img]{: .u-responsive-img}][airtasker-components-img]{:  target="_blank"}
 
 Having looked at the browse tasks page we can start to workout the initial components we are going to need for our app. The coloured rectangles are going to become the following components:
  
@@ -27,7 +27,7 @@ There is one more component that we need but is not shown in the image, `TasksMa
 
 On smaller screens we also see that only one component, either the `TasksLeft` component or the `TasksRight` component containing `TaskDetails` is shown at a time and that `TasksMap` is never shown.
 
-For our design we are going to use the material design pattern provided by [material-ui][material-ui]{: .white .white-hover-dots rel="nofollow"} and to make our components responsive we will use the [react-responsive][react-responsive]{: .white .white-hover-dots rel="nofollow"} module.
+For our design we are going to use the material design pattern provided by [material-ui][material-ui]{: .white .white-hover-dots target="_blank" } and to make our components responsive we will use the [react-responsive][react-responsive]{: .white .white-hover-dots target="_blank" } module.
 
 ## Initial Setup
 {: .dotted .white-dots}
@@ -87,7 +87,7 @@ import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
 ~~~
 
-To support our use of the material design pattern provided by the `material-ui` module we need to include the Roboto font, to do this we will go the route of adding a link to the `index.html` file found in the `public`{: .language-none} directory, if you want to you can also [install it via npm][roboto-npm]{: .white .white-hover-dots rel="nofollow"}.
+To support our use of the material design pattern provided by the `material-ui` module we need to include the Roboto font, to do this we will go the route of adding a link to the `index.html` file found in the `public`{: .language-none} directory, if you want to you can also [install it via npm][roboto-npm]{: .white .white-hover-dots target="_blank" }.
 
 ~~~
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"> 
@@ -260,18 +260,18 @@ export default App;
 
 If we revisit our app in the browser we will see all our components looking something like this:
 
-![Fairtasker initial component design][fairtasker-img]{: .u-responsive-img style="margin: 0 auto;"}
+[![Fairtasker initial component design][fairtasker-img]{: .u-responsive-img style="margin: 0 auto;"}][fairtasker-img]{:  target="_blank"}
 
 ## Add Material UI
 {: .dotted .white-dots}
 
 It's great that our components are working but the layout and design has a bit of room for improvement so let's get start making use of the `material-ui` components in our components to speed up the construction of our app.
 
-If you would like to understand what the props that we pass to the `material-ui` components are doing, visit their corresponing API pages: [Grid][MI-Grid]{: .white .white-hover-dots rel="nofollow"}, [Appbar][MI-Appbar]{: .white .white-hover-dots rel="nofollow"}, [Typography][MI-Typography]{: .white .white-hover-dots rel="nofollow"}
+If you would like to understand what the props that we pass to the `material-ui` components are doing, visit their corresponing API pages: [Grid][MI-Grid]{: .white .white-hover-dots target="_blank" }, [Appbar][MI-Appbar]{: .white .white-hover-dots target="_blank" }, [Typography][MI-Typography]{: .white .white-hover-dots target="_blank" }
 
 In `Layout` we will put our navigation bar, made from `<AppBar />` and render the children passed in via props.
 
-We will be using the spacing property on `<Grid />` which can produce [unwanted horizontal scrolling][negative-margins]{: .white .white-hover-dots rel="nofollow"}, we will take the approach of having `props.children` be childen of a `<div />` with some padding to fix the horizontal scrolling issue. 
+We will be using the spacing property on `<Grid />` which can produce [unwanted horizontal scrolling][negative-margins]{: .white .white-hover-dots target="_blank" }, we will take the approach of having `props.children` be childen of a `<div />` with some padding to fix the horizontal scrolling issue. 
 
 {% assign style="{{ padding: '8px' }}" %}
 
@@ -484,7 +484,7 @@ export default TaskMap;
 
 With all the components updated to include `material-ui` components, if we now visit the app we should have something that looks like:
 
-[![Fairtasker initial material ui design][fairtasker-final-img]{: .u-responsive-img}][fairtasker-final-img]
+[![Fairtasker initial material ui design][fairtasker-final-img]{: .u-responsive-img}][fairtasker-final-img]{:  target="_blank"}
 
 ## The End
 {: .dotted .white-dots}

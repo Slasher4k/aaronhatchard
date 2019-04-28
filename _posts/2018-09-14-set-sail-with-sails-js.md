@@ -90,7 +90,7 @@ Set the homepage route to `'GET /'` and restart the app and you can view the hom
 
 If your coming from express this is the equivelent of defining your routes as app.get("/login", user.login) where the method is the HTTP verb, the first parameter is the url part of the address and the second parameter is the target.
 
-For more information on routes read the [official route documentation][routes]{: .white .white-hover-dots rel="nofollow"}.
+For more information on routes read the [official route documentation][routes]{: .white .white-hover-dots target="_blank" }.
 
 
 ## Route Targets
@@ -218,7 +218,7 @@ Let's define one last route, a logout route that simply displays "You have been 
 Now restart the app and test out our new routes by registering on the site and logging out.
 
 
-For more information on actions read the [official action documentation][actions]{: .white .white-hover-dots rel="nofollow"}.
+For more information on actions read the [official action documentation][actions]{: .white .white-hover-dots target="_blank" }.
 
 ## Practice
 {: .dotted .white-dots}

@@ -40,7 +40,7 @@ You may only want and need a simple website for your business. And if that’s t
 
 But if you want to customise your site – or you simply want the peace of mind that comes from knowing your designer speaks your website’s language – then a WordPress developer is the way to go.
 
-Oh… and I happen to know one… [you can contact me (erm, I mean, him) here][contactme]{: .white .white-hover-dots rel="nofollow"}.
+Oh… and I happen to know one… [you can contact me (erm, I mean, him) here][contactme]{: .white .white-hover-dots }.
 
 [dev]: /wordpress-developer
 [contactme]: /contact

@@ -5,7 +5,7 @@ metadescription: "WordPress plugin to create a scene by applying multiple layers
 ---
 
 
-I recently had an enquiry to make something like this [bathroom fitter][bathConfig]{: .white .white-hover-dots rel="nofollow"}, it basically has a background image of a bathroom and then you can select from various options for bathtubs, tiles, faucets, soap dishes etc that are then overlaid on top of the background image to create a mockup of what a bathroom could look like with the chosen configuration. I decided to generalise the idea and make a WordPress plugin that provides the ability to create multiple scenes, with as many layers as you would like, which can be shown on any page via a shortcode and also provides the ability for the user to have a PDF file emailed to them containing the scene that they have built.  
+I recently had an enquiry to make something like this [bathroom fitter][bathConfig]{: .white .white-hover-dots rel="nofollow" target="_blank"}, it basically has a background image of a bathroom and then you can select from various options for bathtubs, tiles, faucets, soap dishes etc that are then overlaid on top of the background image to create a mockup of what a bathroom could look like with the chosen configuration. I decided to generalise the idea and make a WordPress plugin that provides the ability to create multiple scenes, with as many layers as you would like, which can be shown on any page via a shortcode and also provides the ability for the user to have a PDF file emailed to them containing the scene that they have built.  
 
 ## About the Plugin
 {: .dotted .white-dots}
@@ -18,9 +18,9 @@ On mobile devices the "Scene Panel" and "Overlay Panel" and "PDF Request Form" a
 
 I have setup a beach scene demo consisting of 9 overlays divided between 3 layers, sky, ocean and sand.
 
-[![Scene builder user interface][builder]{: .u-responsive-img}][builder]
+[![Scene builder user interface][builder]{: .u-responsive-img}][builder]{:  target="_blank"}
 
-[View the demo][demo]{: .button .accent-inverse}
+[View the demo][demo]{: .button .accent-inverse target="_blank"}
 
 
 ## Plugin Options
@@ -41,11 +41,11 @@ For best results the scene image and the overlays should all be the same dimensi
 
 To provide all the plugin features I make use of a few third party libraries. 
 
-Having new post types alone wasn't going to provide the ability to obtain the informational requirements to create the scene builder so [Advanced Custom Fields][acf]{: .white .white-hover-dots rel="nofollow"} is used to provide the new post types with the necessary fields to gather the data.
+Having new post types alone wasn't going to provide the ability to obtain the informational requirements to create the scene builder so [Advanced Custom Fields][acf]{: .white .white-hover-dots target="_blank"} is used to provide the new post types with the necessary fields to gather the data.
 
-If you've ever tried to make your own custom options page you know how tedious and time consuming that is, to save me time and provide the user with an easy to use options panel I have used the [Redux Framework][redux]{: .white .white-hover-dots rel="nofollow"}.
+If you've ever tried to make your own custom options page you know how tedious and time consuming that is, to save me time and provide the user with an easy to use options panel I have used the [Redux Framework][redux]{: .white .white-hover-dots target="_blank"}.
 
-The last feature that was needed was the creation of a PDF to send as an email attachment, this feature was implemented with the help of the [FPDF library][fpdf]{: .white .white-hover-dots rel="nofollow"}.
+The last feature that was needed was the creation of a PDF to send as an email attachment, this feature was implemented with the help of the [FPDF library][fpdf]{: .white .white-hover-dots target="_blank" }.
 
 ## Plugin Optimisations
 {: .dotted .white-dots}

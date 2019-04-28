@@ -15,7 +15,7 @@ For this tutorial you will require knowledgede of:
 * Javascript
 * Express.js  
 
-As we will be building on the code from the previous tutorial I highly recommend that you read part one of this series [here][partone]{: .white .white-hover-dots rel="nofollow"}.
+As we will be building on the code from the previous tutorial I highly recommend that you read part one of this series [here][partone]{: .white .white-hover-dots target="_blank" }.
 
 ## Enabling implict routes
 {: .dotted .white-dots}
