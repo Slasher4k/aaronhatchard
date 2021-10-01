@@ -316,7 +316,7 @@ section {
     @include angled-edge("outside bottom", 'lower left', $hero-black,$angle-height);
 }
 
-#fullscreen-hero:before,
+#fullscreen-hero:before
 {
     content: '';
     position: absolute;
