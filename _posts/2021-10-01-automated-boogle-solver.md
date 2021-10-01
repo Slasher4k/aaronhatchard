@@ -67,7 +67,7 @@ I take one list of x,y positions from the word paths at a time and I instruct py
 
 Now the program is working but there is still one point that is bothering me, the manually transcribing the letters from the grid, surely there must be a way to automatically get them and pass them to the website and same me a precious 10 seconds, which in the end could equal hundreds of additional points.
 
-The letters are clearly visible on the screen so it must be possible to use some sort of optical character recognition software to work out the individual letters. There is a tool that perfectly met my needs, (Tesseract)(https://github.com/tesseract-ocr/tesseract){: .white .white-hover-dots target="_blank" } an Open Source OCR Engine, you can give it an image and it will find the words in it. 
+The letters are clearly visible on the screen so it must be possible to use some sort of optical character recognition software to work out the individual letters. There is a tool that perfectly met my needs, [Tesseract](https://github.com/tesseract-ocr/tesseract){: .white .white-hover-dots target="_blank" } an Open Source OCR Engine, you can give it an image and it will find the words in it. 
 
 To get screen grabs I use [Pillow](https://pypi.org/project/Pillow/){: .white .white-hover-dots target="_blank" } , a Python Imaging Library, I start by giving it the whole grid, Exhibit A, but it doesn’t like that, it has the random 2l, 3l, 2w badges on the tiles which throw things off and having the big gaps being letters didn’t help. 
 
