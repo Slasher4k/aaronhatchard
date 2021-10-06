@@ -2,6 +2,7 @@
 layout: post
 title: "Automated Boogle Solver"
 metadescription: "How I automated the playing of Boogle with python, apis, image maninpulation and optical character recognition"
+comments: true
 ---
 
 Welcome back to my biennial blog post, it’s better later than never, patience makes the heart grow fonder or whichever excuse you’ll accept for my “lax” approach to blog writing. What have I been up to? Don’t let me keep you in suspense any longer as I have in store for you a walkthrough of how I automated the playing of the world-renowned, fast-paced, extreme (mental) sport of Boggle. For those unfamiliar with Boogle it is a game where you have a 4 X 4 grid of letters, Exhibit A, and a given time limit with the objective of finding as many words in sequences of adjacent letters.
@@ -89,3 +90,23 @@ After all this reading it is time to see it in action, in the video, you can see
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/LVwZ3Lwdr9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
 </div>
+
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+    
+    var disqus_config = function () {
+    this.page.url = 'https://aaronhatchard.com.au{{ page.url}}'; 
+    this.page.identifier = '{{page.id}}';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aaronhatchard.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
