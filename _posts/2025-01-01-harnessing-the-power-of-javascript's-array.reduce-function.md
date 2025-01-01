@@ -27,7 +27,7 @@ const total = numbers.reduce((accumulator, currentValue) => {
 }, 0);
 console.log(total); // Output: 15
 ```
-{: .language-javascript}
+{: .language-js}
 In this example, we start with an initial value of `0`, and for each number in the `numbers` array, we add it to the `accumulator`, ultimately returning the total sum.
 
 ## When to Use Array.reduce
