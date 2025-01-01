@@ -20,13 +20,13 @@ JavaScript's `Array.reduce` function is a powerful method that allows developers
 
 To illustrate how `reduce` works, let's look at an example. Consider an array of numbers that we want to sum up:
 
-javascript
+```javascript
 const numbers = [1, 2, 3, 4, 5];
 const total = numbers.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
 }, 0);
 console.log(total); // Output: 15
-
+```
 In this example, we start with an initial value of `0`, and for each number in the `numbers` array, we add it to the `accumulator`, ultimately returning the total sum.
 
 ## When to Use Array.reduce
