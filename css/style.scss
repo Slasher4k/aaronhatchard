@@ -860,175 +860,182 @@ label, legend {
     height: 100%;
 }
 
-
 /* Molokai Theme for Rouge */
 
-.highlight {
-  background-color: #1b1d1e;  /* Black background */
+pre.highlight {
+  background-color: #383F41;  /* Black background */
   color: #f8f8f2;             /* White text */
+
+  /* Comments */
+  .c,
+  .c1,
+  .cm { 
+    color: #5e5d83; /* Dark Blue */
+    font-style: italic;
+  }
+
+  .cp { 
+    color: #465457; /* Light Grey */
+    font-weight: bold;
+  }
+
+  .cs { 
+    color: #465457; /* Light Grey */
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  /* Errors */
+  .err { 
+    color: #f8f8f2; /* White text */
+    background-color: #403d3d; /* Grey background */
+  }
+
+  /* Insertions */
+  .gi { 
+    color: #a6e22e; /* Green */
+  }
+
+  /* Deletions */
+  .gd { 
+    color: #f92672; /* Red */
+  }
+
+  /* Emphasis */
+  .ge { 
+    font-style: italic;
+  }
+
+  .ges { 
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  /* Tracebacks */
+  .gt,
+  .gr { 
+    color: #f92672; /* Red */
+  }
+
+  /* Headings */
+  .gh { 
+    color: #403d3d; /* Grey */
+  }
+
+  /* Outputs */
+  .go { 
+    color: #403d3d; /* Grey */
+  }
+
+  /* Prompts */
+  .gp { 
+    color: #66d9ef; /* Blue */
+  }
+
+  /* Strong emphasis */
+  .gs { 
+    font-weight: bold;
+  }
+
+  /* Subheadings */
+  .gu { 
+    color: #465457; /* Light Grey */
+  }
+
+  /* Keywords */
+  .k,
+  .kc,
+  .kd,
+  .kp,
+  .kr,
+  .kt { 
+    color: #66d9ef; /* Blue */
+    font-weight: bold;
+  }
+
+  /* Operators */
+  .o,
+  .ow { 
+    color: #f92672; /* Red */
+    font-weight: bold;
+  }
+
+  /* Numbers and Escapes */
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .se { 
+    color: #af87ff; /* Violet */
+  }
+
+  /* Strings */
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss,
+  .s { 
+    color: #d7d787; /* Yellow */
+  }
+
+  /* Attributes */
+  .na { 
+    color: #a6e22e; /* Green */
+  }
+
+  /* Class names, functions, decorators */
+  .nc,
+  .nd,
+  .ne,
+  .nf { 
+    color: #a6e22e; /* Green */
+    font-weight: bold;
+  }
+
+  /* Constants */
+  .no { 
+    color: #66d9ef; /* Blue */
+  }
+
+  /* Builtins */
+  .bp,
+  .nb,
+  .ni,
+  .nn,
+  .nv,
+  .w { 
+    color: #f8f8f2; /* White */
+  }
+
+  /* Labels */
+  .nl { 
+    color: #f8f8f2; /* White */
+    font-weight: bold;
+  }
+
+  /* Tags */
+  .nt { 
+    color: #f92672; /* Red */
+  }
+
+  /* Text */
+  .n { 
+    color: #f8f8f2; /* White */
+    background-color: #1b1d1e; /* Black background */
+  }
+
 }
 
-/* Comments */
-.highlight .c,
-.highlight .c1,
-.highlight .cm { 
-  color: #5e5d83; /* Dark Blue */
-  font-style: italic;
-}
+pre>code {
 
-.highlight .cp { 
-  color: #465457; /* Light Grey */
-  font-weight: bold;
-}
-
-.highlight .cs { 
-  color: #465457; /* Light Grey */
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* Errors */
-.highlight .err { 
-  color: #f8f8f2; /* White text */
-  background-color: #403d3d; /* Grey background */
-}
-
-/* Insertions */
-.highlight .gi { 
-  color: #a6e22e; /* Green */
-}
-
-/* Deletions */
-.highlight .gd { 
-  color: #f92672; /* Red */
-}
-
-/* Emphasis */
-.highlight .ge { 
-  font-style: italic;
-}
-
-.highlight .ges { 
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* Tracebacks */
-.highlight .gt,
-.highlight .gr { 
-  color: #f92672; /* Red */
-}
-
-/* Headings */
-.highlight .gh { 
-  color: #403d3d; /* Grey */
-}
-
-/* Outputs */
-.highlight .go { 
-  color: #403d3d; /* Grey */
-}
-
-/* Prompts */
-.highlight .gp { 
-  color: #66d9ef; /* Blue */
-}
-
-/* Strong emphasis */
-.highlight .gs { 
-  font-weight: bold;
-}
-
-/* Subheadings */
-.highlight .gu { 
-  color: #465457; /* Light Grey */
-}
-
-/* Keywords */
-.highlight .k,
-.highlight .kc,
-.highlight .kd,
-.highlight .kp,
-.highlight .kr,
-.highlight .kt { 
-  color: #66d9ef; /* Blue */
-  font-weight: bold;
-}
-
-/* Operators */
-.highlight .o,
-.highlight .ow { 
-  color: #f92672; /* Red */
-  font-weight: bold;
-}
-
-/* Numbers and Escapes */
-.highlight .m,
-.highlight .mf,
-.highlight .mh,
-.highlight .mi,
-.highlight .mo,
-.highlight .se { 
-  color: #af87ff; /* Violet */
-}
-
-/* Strings */
-.highlight .sb,
-.highlight .sc,
-.highlight .sd,
-.highlight .s2,
-.highlight .sh,
-.highlight .si,
-.highlight .sx,
-.highlight .sr,
-.highlight .s1,
-.highlight .ss,
-.highlight .s { 
-  color: #d7d787; /* Yellow */
-}
-
-/* Attributes */
-.highlight .na { 
-  color: #a6e22e; /* Green */
-}
-
-/* Class names, functions, decorators */
-.highlight .nc,
-.highlight .nd,
-.highlight .ne,
-.highlight .nf { 
-  color: #a6e22e; /* Green */
-  font-weight: bold;
-}
-
-/* Constants */
-.highlight .no { 
-  color: #66d9ef; /* Blue */
-}
-
-/* Builtins */
-.highlight .bp,
-.highlight .nb,
-.highlight .ni,
-.highlight .nn,
-.highlight .nv,
-.highlight .w { 
-  color: #f8f8f2; /* White */
-}
-
-/* Labels */
-.highlight .nl { 
-  color: #f8f8f2; /* White */
-  font-weight: bold;
-}
-
-/* Tags */
-.highlight .nt { 
-  color: #f92672; /* Red */
-}
-
-/* Text */
-.highlight .n { 
-  color: #f8f8f2; /* White */
-  background-color: #1b1d1e; /* Black background */
+  background: #383F41;
+  text-align: left;
+  border: none;
 }
