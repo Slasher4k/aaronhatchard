@@ -46,12 +46,7 @@ After creating your custom post type, you may want to add more functionalities. 
 ## Displaying Custom Post Types on Your Site
 {: .dotted .white-dots}
 
-Once you have registered your custom post type, you need to display it on the front end of your website. You can create a custom archive template in your theme directory named archive-custom_post.php and a single post template named single-custom_post.php. This ensures that your custom posts are displayed correctly and are easily crawled by search engines.
-
-## Optimising Custom Post Types for SEO
-{: .dotted .white-dots}
-
-To optimise your custom post types for SEO, consider using appropriate keywords in the title, content, and meta descriptions. Additionally, plugins like Yoast SEO can help you manage and optimise your site's SEO performance effectively. Ensure your custom URLs are user-friendly and descriptive, improving click-through rates from search engines.
+Once you have registered your custom post type, you need to display it on the front end of your website. You can create a custom archive template in your theme directory named `archive-custom_post.php` and a single post template named `single-custom_post.php`. This ensures that your custom posts are displayed correctly and are easily crawled by search engines.
 
 ## Conclusion
 {: .dotted .white-dots}
