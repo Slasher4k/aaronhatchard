@@ -25,7 +25,8 @@ layout: none
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url>      
+  {% endfor %}
 
 
 </urlset>
