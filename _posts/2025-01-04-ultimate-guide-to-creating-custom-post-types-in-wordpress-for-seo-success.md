@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ultimate Guide to Creating Custom Post Types in WordPress for SEO Success
+title: Ultimate Guide to Creating Custom Post Types in WordPress
 metadescription: Step-by-Step Tutorial for Enhancing Your WordPress Site
 comments: true
 ---
