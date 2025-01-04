@@ -57,10 +57,10 @@ highlightReact: true
           <div class="row">
             <div class="eight columns offset-by-two">
              <ul style="list-style: none;">
-				  {% for post in site.posts limit:10 %}
+				  {% for post in site.posts offset:1 limit:10 %}
 				    		    	
 			    	<li>
-				        <a href="{{ post.url }}" class="accent-hover-dots">{{ post.title }}</a> {% if forloop.first == true %} <span> - NEW</span> {% endif %}
+				        <a href="{{ post.url }}" class="accent-hover-dots">{{ post.title }}</a>
 			    	</li>
 				  
 				      
