@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -7,111 +10,22 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://www.aaronhatchard.com.au/</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/about</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/wordpress-developer</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/custom-web-design-development</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/web-support-more</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/web-portfolio</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/testimonials</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/blog</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/contact</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2019/04/20/scene-builder.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2019/04/04/fairtasker-firebase-backend-part-3.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2019/03/03/react-fairtasker-tutorial-part-2.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2019/02/22/react-fairtasker.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2019/01/22/hoisting-the-sails.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2018/09/14/set-sail-with-sails-js.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2018/08/01/wordpress-developer.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2018/07/20/custom-wordpress.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2018/01/26/add-review-feature.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2018/01/04/location-based-searching.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2017/12/16/woocommerce-time-based-shipping.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://www.aaronhatchard.com.au/2017/10/30/new-portfolio-design.html</loc>
-  <lastmod>2019-04-20T13:20:23+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
+{% for page in site.pages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 
 </urlset>
