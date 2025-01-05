@@ -13,7 +13,7 @@ layout: none
 {% for page in site.pages %}
   <url>
     <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
-    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ page.date }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
