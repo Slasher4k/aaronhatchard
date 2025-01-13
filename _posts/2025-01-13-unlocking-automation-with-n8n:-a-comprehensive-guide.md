@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unlocking Automation with n8n: A Comprehensive Guide
+title: Unlocking Automation with n8n
 metadescription: Streamline Your Workflows and Boost Productivity with n8n
 comments: true
 ---
