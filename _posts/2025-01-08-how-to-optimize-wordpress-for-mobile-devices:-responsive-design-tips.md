@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Optimize WordPress for Mobile Devices: Responsive Design Tips
+title: How to Optimize WordPress for Mobile Devices - Responsive Design Tips
 metadescription: Unlock the potential of mobile traffic with effective responsive design strategies.
 comments: true
 ---
