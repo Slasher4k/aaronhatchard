@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Comprehensive Guide to Backup and Restore a WordPress Site Using UpdraftPlus Plugin
+title: Backup and Restore a WordPress Site Using UpdraftPlus Plugin
 metadescription: Ensure the Safety of Your Content with Reliable Backup Solutions
 comments: true
 ---
